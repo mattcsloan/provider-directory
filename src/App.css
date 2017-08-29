@@ -11,4 +11,92 @@ body
   line-height: 1.4em;
 }
 
+a
+{
+  color: #238dcd;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: #074d82;
+  text-decoration: underline;
+}
+
+h1
+{
+  font-size: 21px;
+  color: #074d82;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+}
+
 /* =========== End General Tag Styling =========== */
+
+/* ========== Begin Global Class Styling ========== */
+
+.wrapper
+{
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.btn
+{
+  background: #238dcd;
+  padding: 10px 24px;
+  line-height: 1.1em;
+  color: #fff;
+  border-radius: 4px;
+  border: 0;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.btn:hover
+{
+  background: #0976b8;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* =========== End Global Class Styling =========== */
+
+/* ========== Begin Template Styling ========== */
+
+.header
+{
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  margin-bottom: 24px;
+}
+
+.header::after
+{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.header .btn
+{
+  float: right;
+}
+
+h1 .info-pill
+{
+  background: #238dcd;
+  color: #fff;
+  font-size: 14px;
+  padding: 2px 8px;
+  line-height: 1em;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+/* =========== End Template Styling =========== */
