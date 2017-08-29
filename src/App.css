@@ -31,6 +31,65 @@ h1
   margin: 0 0 24px 0;
 }
 
+input[type=text],
+select
+{
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 6px 8px;
+  font-size: 16px;
+  line-height: 1.4em;
+  box-sizing: border-box;
+}
+
+input[type=text]::placeholder
+{
+  color: #999;
+}
+
+select
+{
+  background: #fff url('img/icons.png') no-repeat right -162px;
+  box-sizing: border-box;
+  padding-right: 40px;
+  color: #444;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-left: 8px;
+}
+
+select:hover
+{
+  background-position: right -202px;
+  cursor: pointer;
+}
+
+input[type=text]:focus,
+select:focus
+{
+  border-color: #9ac9e5;
+  outline: none;
+  box-shadow: 0 2px 12px rgba(189,220,238,0.5);
+}
+
+select option:first-child
+{
+  color: #999;
+}
+
+option
+{
+  padding: 4px;
+  border: none;
+}
+
+option[value=""]
+{
+  color: #999;
+}
+
 /* =========== End General Tag Styling =========== */
 
 /* ========== Begin Global Class Styling ========== */
@@ -99,4 +158,66 @@ h1 .info-pill
   margin-left: 4px;
 }
 
+.search-bar
+{
+  position: relative;
+}
+
+.search-bar input[type="text"]
+{
+  padding-right: 45px;
+  width: 100%;
+}
+
+.search-bar input[type="submit"]
+{
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background: url(img/icons.png) no-repeat right -243px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  width: 40px;
+  height: 34px;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.search-bar input[type="submit"]:hover
+{
+  background-position: right -283px;
+  cursor: pointer;
+  background-color: #fafafa;
+  border-left: 1px solid #eee;
+}
+
 /* =========== End Template Styling =========== */
+
+/* ========= Begin Content Styling =========== */
+
+.product-title
+{
+  float: left;
+  margin-top: 8px;
+}
+
+.directory-actions
+{
+  float: right;
+  margin-bottom: 32px;
+}
+
+.directory-actions > div
+{
+  float: right;
+  margin-left: 32px;
+}
+
+.directory-actions label
+{
+  color: #999;
+}
+
+/* ========== End Content Styling ============ */
