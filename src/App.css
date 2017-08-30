@@ -23,6 +23,11 @@ a:hover
   text-decoration: underline;
 }
 
+form
+{
+  margin: 0;
+}
+
 h1
 {
   font-size: 21px;
@@ -90,6 +95,50 @@ option[value=""]
   color: #999;
 }
 
+table
+{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  width: 100%;
+  font-size: 16px;
+  border-collapse: collapse;
+}
+
+th
+{
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+tbody tr
+{
+  border: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  color: #444;
+}
+
+tbody tr:nth-child(odd)
+{
+  background: #f9f9f9;
+}
+
+tbody tr:hover
+{
+  background-color: #f4f9fc;
+  border-color: #9ac9e5;
+}
+
+tbody td
+{
+  padding: 16px;
+}
+
 /* =========== End General Tag Styling =========== */
 
 /* ========== Begin Global Class Styling ========== */
@@ -122,6 +171,14 @@ option[value=""]
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+}
+
+.btn.btn-subtle
+{
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 9px 23px;
+  color: #238dcd;
 }
 
 /* =========== End Global Class Styling =========== */
@@ -218,6 +275,102 @@ h1 .info-pill
 .directory-actions label
 {
   color: #999;
+}
+
+.provider-directory table
+{
+  clear: both;
+  margin-bottom: 32px;
+}
+
+.provider-directory table tr td:first-child,
+.provider-directory table tr th:first-child
+{
+  width: 42px;
+  border-right: 1px solid #eee;
+}
+
+.provider-info strong
+{
+  font-size: 18px;
+  color: #074d82;
+  font-weight: 600;
+  display: block;
+}
+
+.provider-info span
+{
+  font-size: 14px;
+  color: #777;
+}
+
+.provider-actions
+{
+  position: relative;
+  display: none;
+}
+
+.provider-directory table tr:hover .provider-actions
+{
+  display: block;
+}
+
+.provider-actions > .btn
+{
+  background: #fff url(img/icons.png) no-repeat right -322px;
+  width: 40px;
+  padding: 0;
+  height: 36px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.provider-actions > .btn:hover
+{
+  background-position: right -362px;
+  border-color: #9ac9e5;
+  outline: none;
+  box-shadow: 0 2px 12px rgba(189,220,238,0.5);
+}
+
+.provider-actions-menu
+{
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 37px;
+  left: 0;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  min-width: 160px;
+}
+
+.provider-actions-menu a
+{
+  padding: 8px 16px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.provider-actions-menu a:hover
+{
+  text-decoration: none;
+  background: #fafafa;
+}
+
+.provider-actions:hover span
+{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: #fff;
+}
+
+.provider-actions:hover .provider-actions-menu
+{
+  display: block;
 }
 
 /* ========== End Content Styling ============ */
