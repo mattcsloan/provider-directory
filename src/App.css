@@ -290,6 +290,11 @@ h1 .info-pill
   border-right: 1px solid #eee;
 }
 
+td.provider-info
+{
+  width: 40%;
+}
+
 .provider-info strong
 {
   font-size: 18px;

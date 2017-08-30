@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import mockProviders from '../../data/mockProviders.json';
+
 class ProviderDirectory extends Component {
   render() {
     return (
@@ -14,24 +16,26 @@ class ProviderDirectory extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <div className="provider-actions">
-                  <span className="btn btn-subtle">&hellip;</span>
-                  <div className="provider-actions-menu">
-                    <a href="#">Email Mike</a>
-                    <a href="#">Update Provider</a>
-                    <a href="#" className="delete-provider">Delete Provider</a>
+            {mockProviders.map(provider => (
+              <tr key={provider.email_address}>
+                <td>
+                  <div className="provider-actions">
+                    <span className="btn btn-subtle">&hellip;</span>
+                    <div className="provider-actions-menu">
+                      <a href="#">Email {provider.first_name}</a>
+                      <a href="#">Update Provider</a>
+                      <a href="#" className="delete-provider">Delete Provider</a>
+                    </div>
                   </div>
-                </div>
-              </td>
-              <td className="provider-info">
-                <strong>Harris, Mike</strong>
-                <span>mharris@updox.com</span>
-              </td>
-              <td>Pediatrics</td>
-              <td>Harris Pediatrics</td>
-            </tr>
+                </td>
+                <td className="provider-info">
+                  <strong>{provider.last_name}, {provider.first_name}</strong>
+                  <span>{provider.email_address}</span>
+                </td>
+                <td>{provider.specialty}</td>
+                <td>{provider.practice_name}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
