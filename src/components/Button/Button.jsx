@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Button extends Component {
-  render() {
-    return (
-      <a className="btn" href="#">{this.props.label}</a>
-    )
-  }
+function Button (props) {
+  return (
+    <a
+      className="btn" 
+      onClick={() => props.onToggleProviderForm()}
+    >
+      {props.label}
+    </a>
+  )
 };
 
 export default Button;

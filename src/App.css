@@ -141,6 +141,7 @@ tbody td
 
 /* =========== End General Tag Styling =========== */
 
+
 /* ========== Begin Global Class Styling ========== */
 
 .wrapper
@@ -183,6 +184,7 @@ tbody td
 
 /* =========== End Global Class Styling =========== */
 
+
 /* ========== Begin Template Styling ========== */
 
 .header
@@ -213,6 +215,16 @@ h1 .info-pill
   line-height: 1em;
   border-radius: 4px;
   margin-left: 4px;
+}
+
+.mod
+{
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 16px;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .search-bar
@@ -252,7 +264,48 @@ h1 .info-pill
 
 /* =========== End Template Styling =========== */
 
+
 /* ========= Begin Content Styling =========== */
+
+.add-provider
+{
+  margin-bottom: 48px;
+  clear: both;
+}
+
+.add-provider-form
+{
+  display: flex;
+}
+
+.add-provider-form input
+{
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.add-provider-form input:last-child
+{
+  margin-right: 0;
+}
+
+.close-form
+{
+  background: url(img/icons.png) no-repeat right -402px;
+  float: right;
+  display: block;
+  width: 40px;
+  height: 40px;  
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.close-form:hover
+{
+  background-position: right -442px;
+  cursor: pointer;
+}
 
 .product-title
 {

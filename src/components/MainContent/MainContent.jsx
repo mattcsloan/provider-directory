@@ -1,20 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
+import AddProvider from '../AddProvider';
 import DirectoryActions from '../DirectoryActions';
 import ProviderDirectory from '../ProviderDirectory';
-import Button from '../Button';
 
-class MainContent extends Component {
-  render() {
-    return (
-      <div className="wrapper">
-        <h1 className="product-title">Provider Directory <span className="info-pill">2.0</span></h1>
-        <DirectoryActions />
-        <ProviderDirectory />
-        <Button label="Add New Provider" />
-      </div>
-    )
-  }
+function MainContent(props) {
+  return (
+    <div className="wrapper">
+      {props.showProviderForm &&
+        <AddProvider
+          onToggleProviderForm={props.onToggleProviderForm}
+        />
+      }
+      <h1 className="product-title">Provider Directory <span className="info-pill">2.0</span></h1>
+      <DirectoryActions />
+      <ProviderDirectory />
+    </div>
+  )
 };
 
 export default MainContent;
