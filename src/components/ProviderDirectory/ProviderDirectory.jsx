@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import mockProviders from '../../data/mockProviders.json';
-
 class ProviderDirectory extends Component {
   render() {
     return (
@@ -16,7 +14,7 @@ class ProviderDirectory extends Component {
             </tr>
           </thead>
           <tbody>
-            {mockProviders.map(provider => (
+            {this.props.providers.map(provider => (
               <tr key={provider.email_address}>
                 <td>
                   <div className="provider-actions">
@@ -24,7 +22,7 @@ class ProviderDirectory extends Component {
                     <div className="provider-actions-menu">
                       <a href="#">Email {provider.first_name}</a>
                       <a href="#">Update Provider</a>
-                      <a href="#" className="delete-provider">Delete Provider</a>
+                      <a onClick={() => this.props.onDeleteProvider(provider)} className="delete-provider">Delete Provider</a>
                     </div>
                   </div>
                 </td>

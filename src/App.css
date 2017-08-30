@@ -21,6 +21,7 @@ a:hover
 {
   color: #074d82;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 form
