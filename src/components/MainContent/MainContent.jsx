@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import escapeRegExp from 'escape-string-regexp';
+import sortBy from 'sort-by';
 
 import AddProvider from '../AddProvider';
 import DirectoryActions from '../DirectoryActions';
@@ -12,7 +13,8 @@ class MainContent extends Component {
     providers: mockProviders,
     specialties: [],
     query: '',
-    filter: ''
+    filter: '',
+    sortBy: 'last_name'
   }
 
   removeProvider = (provider) => {
@@ -26,7 +28,12 @@ class MainContent extends Component {
   }
 
   updateFilter = (filter) => {
-    this.setState({ filter: filter });
+    this.setState({ filter });
+  }
+
+  updateSort = (item) => {
+    const sorter = item === this.state.sortBy ? `-${item}` : item;
+    this.setState({ sortBy: sorter });
   }
 
   componentDidMount() {
@@ -64,6 +71,8 @@ class MainContent extends Component {
       })
     }
 
+    visibleProviders.sort(sortBy(this.state.sortBy));
+
     return (
       <div className="wrapper">
         {this.props.showProviderForm &&
@@ -81,6 +90,8 @@ class MainContent extends Component {
         <ProviderDirectory
           providers={visibleProviders}
           onDeleteProvider={this.removeProvider}
+          onUpdateSort={this.updateSort}
+          sortBy={this.state.sortBy}
         />
       </div>
     )

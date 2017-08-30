@@ -110,7 +110,7 @@ th
 {
   font-size: 18px;
   font-weight: 400;
-  color: #333;
+  color: #666;
   padding: 8px 16px;
   border-bottom: 1px solid #ddd;
   text-align: left;
@@ -337,11 +337,50 @@ h1 .info-pill
   margin-bottom: 32px;
 }
 
+.provider-directory th.sort-option
+{
+  background: url(img/icons.png) no-repeat right top;
+  padding-right: 40px;
+}
+
+.provider-directory th.sort-option.sort-asc
+{
+  color: #074d82;
+  background-position: right -120px;
+  border-bottom-color: #9ac9e5;
+}
+
+.provider-directory th.sort-option.sort-desc
+{
+  color: #074d82;
+  background-position: right -80px;
+  border-bottom-color: #9ac9e5;
+}
+
+.provider-directory th.sort-option:hover
+{
+  color: #0976b8;
+  border-bottom-color: #9ac9e5;
+  cursor: pointer;
+  background-position: right -40px;
+}
+
 .provider-directory table tr td:first-child,
 .provider-directory table tr th:first-child
 {
   width: 42px;
+}
+
+.provider-directory table tr td,
+.provider-directory table tr th
+{
   border-right: 1px solid #eee;
+}
+
+.provider-directory table tr td:last-child,
+.provider-directory table tr th:last-child
+{
+  border-right: 0;
 }
 
 td.provider-info
