@@ -188,13 +188,13 @@ input[type="submit"]:disabled:hover
 {
   opacity: 0.6;
   background: #238dcd;
-  cursor: not-allowed;  
+  cursor: not-allowed;
 }
 
 input.has-error
 {
   border-color: #cc0000;
-  box-shadow: 0 2px 12px rgba(229,172,172,0.5);  
+  box-shadow: 0 2px 12px rgba(229,172,172,0.5);
 }
 
 .form-errors
@@ -303,6 +303,33 @@ h1 .info-pill
   cursor: pointer;
   background-color: #fafafa;
   border-left: 1px solid #eee;
+}
+
+.typeahead-selector
+{
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.typeahead-selector a
+{
+  padding: 8px 16px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.typeahead-selector a:hover
+{
+  text-decoration: none;
+  background: #fafafa;
 }
 
 /* =========== End Template Styling =========== */

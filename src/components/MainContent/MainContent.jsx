@@ -110,6 +110,7 @@ class MainContent extends Component {
           query={query}
           onUpdateFilter={this.updateFilter}
           specialties={specialties}
+          providers={visibleProviders}
       />
         <ProviderDirectory
           providers={visibleProviders}

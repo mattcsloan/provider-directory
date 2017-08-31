@@ -8,6 +8,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.12",
+    "react-typeahead": "^2.0.0-alpha.6",
     "sort-by": "^1.2.0"
   },
   "scripts": {
