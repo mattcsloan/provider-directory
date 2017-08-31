@@ -1,7 +1,9 @@
 import React from 'react';
+import sortBy from 'sort-by';
 
 function ProviderDirectory(props) {
-  const sortOrder = props.sortBy.startsWith('-') ? "sort-desc" : "sort-asc"
+  const sortOrder = props.sortBy.startsWith('-') ? "sort-desc" : "sort-asc";
+  const sortedProviders = [].concat(props.providers).sort(sortBy(props.sortBy));
   return (
     <div className="provider-directory">
       <table cellSpacing="0" cellPadding="0">
@@ -35,7 +37,7 @@ function ProviderDirectory(props) {
           </tr>
         </thead>
         <tbody>
-          {props.providers.map(provider => (
+          {sortedProviders.map(provider => (
             <tr key={provider.email_address}>
               <td>
                 <div className="provider-actions">

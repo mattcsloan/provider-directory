@@ -16,12 +16,13 @@ class App extends Component {
   };
 
   render() {
+    const { showProviderForm } = this.state;
     return (
       <div className="App">
         <Header onToggleProviderForm={this.toggleProviderForm} />
         <MainContent
           onToggleProviderForm={this.toggleProviderForm}
-          showProviderForm={this.state.showProviderForm}
+          showProviderForm={showProviderForm}
         />
       </div>
     );

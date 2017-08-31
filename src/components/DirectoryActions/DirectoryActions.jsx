@@ -1,6 +1,7 @@
 import React from 'react';
 
 function DirectoryActions(props) {
+  const sortedSpecialties = [].concat(props.specialties).sort((a, b) => a.localeCompare(b));
   return (
     <div className="directory-actions">
       <div className="search-bar">
@@ -19,7 +20,7 @@ function DirectoryActions(props) {
           defaultValue=""
         >
           <option value="">All Specialties</option>
-          {props.specialties.map(specialty => {
+          {sortedSpecialties.map(specialty => {
               return <option key={specialty} value={specialty}>{specialty}</option>
             })
           }

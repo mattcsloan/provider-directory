@@ -365,6 +365,16 @@ h1 .info-pill
   background-position: right -40px;
 }
 
+.provider-directory th.sort-option.sort-desc:hover
+{
+  background-position: right -80px;
+}
+
+.provider-directory th.sort-option.sort-asc:hover
+{
+  background-position: right -120px;
+}
+
 .provider-directory table tr td:first-child,
 .provider-directory table tr th:first-child
 {
@@ -386,6 +396,7 @@ h1 .info-pill
 td.provider-info
 {
   width: 40%;
+  height: 45px;
 }
 
 .provider-info strong
