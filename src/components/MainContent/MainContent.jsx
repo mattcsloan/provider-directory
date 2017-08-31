@@ -101,6 +101,7 @@ class MainContent extends Component {
           <AddProvider
             onToggleProviderForm={onToggleProviderForm}
             onAddProvider={this.addProvider}
+            providers={providers}
           />
         }
         <h1 className="product-title">Provider Directory <span className="info-pill">2.0</span></h1>

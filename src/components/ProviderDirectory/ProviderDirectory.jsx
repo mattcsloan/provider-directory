@@ -43,8 +43,7 @@ function ProviderDirectory(props) {
                 <div className="provider-actions">
                   <span className="btn btn-subtle">&hellip;</span>
                   <div className="provider-actions-menu">
-                    <a href="#">Email {provider.first_name}</a>
-                    <a href="#">Update Provider</a>
+                    <a href={`mailto: ${provider.email_address}`}>Email {provider.first_name}</a>
                     <a onClick={() => props.onDeleteProvider(provider)} className="delete-provider">Delete Provider</a>
                   </div>
                 </div>
