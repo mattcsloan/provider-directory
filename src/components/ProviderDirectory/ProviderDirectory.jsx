@@ -56,6 +56,11 @@ function ProviderDirectory(props) {
               <td>{provider.practice_name}</td>
             </tr>
           ))}
+          {!sortedProviders.length &&
+            <tr>
+              <td colSpan="4" className="empty-state">No results found. Try resetting the search and filters or add a new provider.</td>
+            </tr>
+          }
         </tbody>
       </table>
     </div>

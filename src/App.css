@@ -242,11 +242,16 @@ input.has-error
   margin-bottom: 24px;
 }
 
-.header::after
+.header .wrapper::after
 {
   content: '';
   display: block;
   clear: both;
+}
+
+.header img
+{
+  float: left;
 }
 
 .header .btn
@@ -485,6 +490,15 @@ td.provider-info
 {
   font-size: 14px;
   color: #777;
+}
+
+.empty-state
+{
+  background: #fff;
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+  font-style: oblique;
 }
 
 .provider-actions
