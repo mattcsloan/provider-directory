@@ -13,7 +13,8 @@ class MainContent extends Component {
     specialties: [],
     query: '',
     filter: '',
-    sortBy: 'last_name'
+    sortBy: 'last_name',
+    addProviderSuccess: false,
   }
 
   removeProvider = (provider) => {
@@ -28,9 +29,13 @@ class MainContent extends Component {
       providers: [provider, ...state.providers],
       specialties: !state.specialties.includes(provider.specialty) ?
         [...state.specialties, provider.specialty] :
-        state.specialties
+        state.specialties,
+      addProviderSuccess: true
     }));
     this.props.onToggleProviderForm();
+    setTimeout(function(){
+      this.setState({addProviderSuccess: false});
+    }.bind(this), 4000);
   }
 
   updateQuery = (query) => {
@@ -73,7 +78,8 @@ class MainContent extends Component {
       providers,
       filter,
       sortBy,
-      specialties
+      specialties,
+      addProviderSuccess
     } = this.state;
 
     let visibleProviders;
@@ -103,6 +109,9 @@ class MainContent extends Component {
             onAddProvider={this.addProvider}
             providers={providers}
           />
+        }
+        {addProviderSuccess &&
+          <div className="notification notification-bar">The provider has been successfully added to the directory.</div>
         }
         <h1 className="product-title">Provider Directory <span className="info-pill">2.0</span></h1>
         <DirectoryActions

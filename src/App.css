@@ -225,6 +225,11 @@ input.has-error
   border-color: #ebccd1;
 }
 
+.notification.notification-bar
+{
+  margin: 0 0 24px 0;
+}
+
 /* =========== End Global Class Styling =========== */
 
 
