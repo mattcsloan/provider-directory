@@ -37,7 +37,7 @@ function ProviderDirectory(props) {
           </tr>
         </thead>
         <tbody>
-          {sortedProviders.map(provider => (
+          {sortedProviders && sortedProviders.map(provider => (
             <tr key={provider.email_address}>
               <td>
                 <div className="provider-actions">

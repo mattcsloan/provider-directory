@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme": "^2.9.1",
     "escape-string-regexp": "^1.0.5",
     "form-serialize": "^0.7.2",
     "react": "^15.6.1",
+    "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.12",
+    "react-test-renderer": "^15.6.1",
     "react-typeahead": "^2.0.0-alpha.6",
     "sort-by": "^1.2.0"
   },

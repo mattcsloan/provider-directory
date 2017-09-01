@@ -21,6 +21,7 @@ function DirectoryActions(props) {
       <div className="filter-selector">
         <label>Filter by:</label>
         <select
+          className="filter-selector-dropdown"
           onChange={(event) => props.onUpdateFilter(event.target.value)}
           defaultValue=""
         >
