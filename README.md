@@ -2,6 +2,9 @@
 
 UI coding challenge, built with React.<br>
 
+This application has been deployed to Heroku. It loads faster locally than it does using Heroku's free hosting plan that sleeps after inactivity, but it can be accessed here: https://ud-providerdirectory.herokuapp.com/<br>
+
+
 ## Instructions
 
 In the project directory, you can run:
